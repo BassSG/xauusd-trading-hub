@@ -1,0 +1,16 @@
+{
+  "fallback_data": true,
+  "note": "Used when APIs are unavailable",
+  "current_price": 4879.60,
+  "ma50": 4893.77,
+  "ma200": 4187.54,
+  "volatility": 153.63,
+  "volatility_pct": 3.15,
+  "trend": "Sideways",
+  "rsi": 50.0,
+  "macd": 0.0,
+  "signal": 0.0,
+  "support_zone": [4375.5, 4399.3, 4404.1, 4492.0, 4526.0],
+  "resistance_zone": [5229.7, 5230.5, 5294.4, 5301.6, 5318.4],
+  "last_updated": "2026-04-19 21:00:00"
+}

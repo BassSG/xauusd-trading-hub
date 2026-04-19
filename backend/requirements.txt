@@ -1,0 +1,9 @@
+# XAUUSD Trading Hub Backend Dependencies
+
+# Core
+urllib3>=1.26.0
+
+# API Server (optional - for dashboard API)
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0

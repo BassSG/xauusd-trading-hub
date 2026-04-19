@@ -1,0 +1,36 @@
+{
+  "sentiment": {
+    "overall": "Neutral",
+    "bullish_count": 5,
+    "bearish_count": 3,
+    "neutral_count": 2,
+    "score": 60.0,
+    "news_count": 10
+  },
+  "summary": "Market sentiment is BULLISH (Score: 60.0/100). Based on 10 news articles. More positive catalysts than negative.",
+  "news": [
+    {
+      "title": "Gold Prices Rally as Dollar Weakens",
+      "description": "Gold futures pushed higher as the US dollar index fell to a three-week low, making the precious metal more affordable for foreign buyers.",
+      "url": "#",
+      "source": "Market Watch"
+    },
+    {
+      "title": "Fed Rate Cut Expectations Support Gold",
+      "description": "Market participants are increasingly pricing in Fed rate cuts for 2026, which typically supports gold as a non-yielding asset.",
+      "url": "#",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold Technical Analysis: Key Resistance at $5,000",
+      "description": "Traders are watching the psychological $5,000 level as gold continues its upward momentum.",
+      "url": "#",
+      "source": "TradingView"
+    }
+  ],
+  "last_updated": "2026-04-19 21:00:00",
+  "sources": {
+    "brave": 10,
+    "travily": 3
+  }
+}

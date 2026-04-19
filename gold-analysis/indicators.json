@@ -1,0 +1,9 @@
+{
+  "rsi": 73.35,
+  "macd": 37.70,
+  "signal": 37.70,
+  "signal_strength": "Overbought - Potential Sell",
+  "support_zone": [4375.5, 4399.3, 4404.1, 4492.0, 4526.0],
+  "resistance_zone": [5229.7, 5230.5, 5294.4, 5301.6, 5318.4],
+  "last_calculated": "2026-04-19 21:00:00"
+}
