@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Economic Calendar - XAUUSD Trading Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html"><span class="icon">📊</span><span class="text">Dashboard</span></a>
+            <a href="daily-briefings.html"><span class="icon">📰</span><span class="text">Daily</span></a>
+            <a href="economic-calendar.html" class="active"><span class="icon">📅</span><span class="text">Calendar</span></a>
+            <a href="gold-analysis.html"><span class="icon">🔍</span><span class="text">Analysis</span></a>
+            <a href="weekly-reports.html"><span class="icon">📈</span><span class="text">Weekly</span></a>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">📅</div>
+                    <div class="logo-text">
+                        <h1>Economic Calendar</h1>
+                        <p>XAUUSD Trading Week: April 20–26, 2026</p>
+                    </div>
+                </div>
+                <div class="header-badge">
+                    <span class="badge badge-gold">
+                        <span class="status-dot gold"></span>
+                        Week Ahead
+                    </span>
+                    <span class="badge badge-neutral">
+                        5 High Impact Events
+                    </span>
+                </div>
+            </div>
+            <div class="update-badge">
+                Last updated: April 19, 2026 18:30 GMT+7 | 12 Events This Week
+            </div>
+        </header>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-4" style="margin-bottom: 24px;">
+            <div class="price-card gold">
+                <div class="price-label">Current Gold Price</div>
+                <div class="price-value">$4,879.60</div>
+                <div class="price-change up">📈 +1.97% This Week</div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">High Impact Events</div>
+                <div class="price-value" style="color: var(--bearish);">5</div>
+                <div class="price-meta"><span>BoC, FOMC, ECB</span></div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">Market Status</div>
+                <div class="price-value" style="color: var(--text-secondary);">Weekend</div>
+                <div class="price-meta"><span>Markets Closed</span></div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">ATR Volatility</div>
+                <div class="price-value" style="color: var(--neutral);">$153.63</div>
+                <div class="price-meta"><span>High Volatility</span></div>
+            </div>
+        </div>
+
+        <!-- High Impact Events -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🔴</div>
+                <div>
+                    <h2 class="section-title">High Impact Events</h2>
+                    <p class="section-subtitle">Events that typically move gold prices significantly</p>
+                </div>
+            </div>
+
+            <div class="event-list">
+                <!-- Monday -->
+                <div class="event-item high">
+                    <div class="event-time">Apr 20<br>13:45</div>
+                    <div class="event-content">
+                        <div class="event-country">🇨🇦 CANADA</div>
+                        <div class="event-name">Bank of Canada (BoC) Interest Rate Decision</div>
+                        <div class="event-meta">
+                            <span>Previous: 2.25%</span>
+                            <span class="tag tag-bear">High Impact</span>
+                        </div>
+                        <div class="scenario-content" style="margin-top: 12px; padding: 12px; background: var(--bg-card); border-radius: 8px;">
+                            <strong>Why BoC Matters:</strong> CAD correlation with USD. Rate cut = weaker CAD = stronger USD = pressure on gold.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wednesday -->
+                <div class="event-item high">
+                    <div class="event-time">Apr 23<br>19:00</div>
+                    <div class="event-content">
+                        <div class="event-country">🇺🇸 USA</div>
+                        <div class="event-name">FOMC Meeting Minutes</div>
+                        <div class="event-meta">
+                            <span>Release Time: 19:00 GMT+7</span>
+                            <span class="tag tag-bear">High Impact</span>
+                        </div>
+                        <div class="scenario-content" style="margin-top: 12px; padding: 12px; background: var(--bg-card); border-radius: 8px;">
+                            <strong>Why FOMC Matters:</strong> Gold highly sensitive to real interest rates. Hawkish Fed = stronger USD = lower gold.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-item high">
+                    <div class="event-time">Apr 23<br>21:00</div>
+                    <div class="event-content">
+                        <div class="event-country">🇺🇸 USA</div>
+                        <div class="event-name">Fed Chair Speech</div>
+                        <div class="event-meta">
+                            <span>Jerome Powell Speaks</span>
+                            <span class="tag tag-bear">High Impact</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thursday -->
+                <div class="event-item high">
+                    <div class="event-time">Apr 24<br>09:00</div>
+                    <div class="event-content">
+                        <div class="event-country">🇪🇺 EUROPE</div>
+                        <div class="event-name">ECB Main Refinancing Rate</div>
+                        <div class="event-meta">
+                            <span>Previous: 2.50%</span>
+                            <span class="tag tag-bear">High Impact</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-item high">
+                    <div class="event-time">Apr 24<br>09:30</div>
+                    <div class="event-content">
+                        <div class="event-country">🇪🇺 EUROPE</div>
+                        <div class="event-name">ECB President Lagarde Speech</div>
+                        <div class="event-meta">
+                            <span>Post-Rate Decision</span>
+                            <span class="tag tag-bear">High Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medium Impact -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🟡</div>
+                <div>
+                    <h2 class="section-title">Medium Impact Events</h2>
+                    <p class="section-subtitle">Events that may cause moderate price movements</p>
+                </div>
+            </div>
+
+            <div class="event-list">
+                <div class="event-item medium">
+                    <div class="event-time">Apr 20<br>12:30</div>
+                    <div class="event-content">
+                        <div class="event-country">🇨🇦 CANADA</div>
+                        <div class="event-name">Inflation Rate YoY (March)</div>
+                        <div class="event-meta"><span>Previous: 1.8%</span></div>
+                    </div>
+                </div>
+
+                <div class="event-item medium">
+                    <div class="event-time">Apr 21<br>15:00</div>
+                    <div class="event-content">
+                        <div class="event-country">🇪🇺 EU</div>
+                        <div class="event-name">German Ifo Business Climate (April)</div>
+                        <div class="event-meta"><span>Previous: 86.3</span></div>
+                    </div>
+                </div>
+
+                <div class="event-item medium">
+                    <div class="event-time">Apr 22<br>21:00</div>
+                    <div class="event-content">
+                        <div class="event-country">🇺🇸 USA</div>
+                        <div class="event-name">Crude Oil Inventories</div>
+                        <div class="event-meta"><span>Impact: Commodity correlation</span></div>
+                    </div>
+                </div>
+
+                <div class="event-item medium">
+                    <div class="event-time">Apr 24<br>15:00</div>
+                    <div class="event-content">
+                        <div class="event-country">🇺🇸 USA</div>
+                        <div class="event-name">Consumer Confidence Index (April)</div>
+                        <div class="event-meta"><span>Previous: 98.6</span></div>
+                    </div>
+                </div>
+
+                <div class="event-item medium">
+                    <div class="event-time">Apr 24<br>13:30</div>
+                    <div class="event-content">
+                        <div class="event-country">🇨🇦 CANADA</div>
+                        <div class="event-name">Core Retail Sales MoM (February)</div>
+                        <div class="event-meta"><span>Previous: -0.3%</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gold Sensitivity Matrix -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div>
+                    <h2 class="section-title">Gold Price Sensitivity Matrix</h2>
+                    <p class="section-subtitle">How different events typically affect gold prices</p>
+                </div>
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-item bear">
+                    <div class="scenario-title">
+                        <span>📉</span> Stronger USD / Higher Rates
+                    </div>
+                    <div class="scenario-content">Typically Bearish for gold. Higher rates increase opportunity cost of holding non-yielding gold.</div>
+                </div>
+                <div class="scenario-item bull">
+                    <div class="scenario-title">
+                        <span>📈</span> Weaker USD / Lower Rates
+                    </div>
+                    <div class="scenario-content">Typically Bullish for gold. Lower rates reduce opportunity cost and USD weakness support gold.</div>
+                </div>
+                <div class="scenario-item bull">
+                    <div class="scenario-title">
+                        <span>🛡️</span> Geopolitical Risk
+                    </div>
+                    <div class="scenario-content">Bullish for gold. Safe-haven demand surges during uncertainty and global tensions.</div>
+                </div>
+                <div class="scenario-item bear">
+                    <div class="scenario-title">
+                        <span>📊</span> Risk-On (Strong Equities)
+                    </div>
+                    <div class="scenario-content">Typically Bearish for gold. Capital flows to higher-yielding assets during risk appetite.</div>
+                </div>
+                <div class="scenario-item bull">
+                    <div class="scenario-title">
+                        <span>💰</span> Inflation Surprise
+                    </div>
+                    <div class="scenario-content">Bullish for gold. Gold is traditionally an inflation hedge; unexpected inflation drives prices higher.</div>
+                </div>
+                <div class="scenario-item bear">
+                    <div class="scenario-title">
+                        <span>🏦</span> Central Bank Tightening
+                    </div>
+                    <div class="scenario-content">Bearish for gold. Aggressive policy tightening strengthens USD and raises real interest rates.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            ⚠️ <strong>Disclaimer:</strong> This economic calendar is for informational purposes only. 
+            Events and times are subject to change. Trading XAUUSD carries significant risk. 
+            Always conduct your own analysis and consult a licensed financial advisor before making trading decisions.
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">🟡</div>
+            <p class="footer-text">
+                <strong>XAUUSD Trading Hub</strong> | Data: FMP API | Generated: April 19, 2026
+            </p>
+            <p class="footer-text" style="margin-top: 8px;">
+                <a href="https://github.com/BassSG/xauusd-trading-hub" target="_blank">GitHub</a> | 
+                <a href="https://BassSG.github.io/xauusd-trading-hub/" target="_blank">Dashboard</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
