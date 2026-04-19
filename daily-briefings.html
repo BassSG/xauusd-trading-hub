@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <meta name="theme-color" content="#0a0e17">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ทองคำ Trading">
+    <meta name="application-name" content="XAUUSD Trading Hub">
+    <meta name="msapplication-TileColor" content="#0a0e17">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="pwa/icon-192x192.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📰 Daily Briefings - XAUUSD Trading Hub</title>
@@ -170,6 +179,23 @@
                 <a href="https://BassSG.github.io/xauusd-trading-hub/" target="_blank">Dashboard</a>
             </p>
         </footer>
+    </div>
+    <script src="assets/js/pwa.js" defer></script>
+    <!-- Install Banner -->
+    <div id="install-banner" class="install-banner">
+        <div class="install-banner-text">
+            <div class="install-banner-title">📱 ติดตั้งแอปบนมือถือ</div>
+            <div class="install-banner-sub">เข้าถึงเร็วขึ้น ใช้แบบ Offline ได้</div>
+        </div>
+        <button id="install-btn" class="install-banner-btn">ติดตั้ง</button>
+        <button id="install-close" class="install-banner-close">✕</button>
+    </div>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-icon">🟡</div>
+        <div class="splash-title">XAUUSD Trading Hub</div>
+        <div class="splash-subtitle">กำลังโหลด...</div>
     </div>
 </body>
 </html>

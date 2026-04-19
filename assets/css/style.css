@@ -1656,3 +1656,455 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ================================================
+   MOBILE-FIRST PWA STYLES
+   Android App-like Experience
+   ================================================ */
+
+/* Safe area for notched phones */
+@supports (padding: env(safe-area-inset-top)) {
+    :root {
+        --safe-area-top: env(safe-area-inset-top);
+        --safe-area-bottom: env(safe-area-inset-bottom);
+        --safe-area-left: env(safe-area-inset-left);
+        --safe-area-right: env(safe-area-inset-right);
+    }
+    
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
+
+/* Mobile viewport */
+@media screen and (max-width: 768px) {
+    :root {
+        --mobile-nav-height: 70px;
+    }
+    
+    body {
+        padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px));
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        overscroll-behavior-y: contain;
+    }
+    
+    /* App-like header */
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: rgba(10, 14, 23, 0.85) !important;
+        border-radius: 0;
+        margin: -20px -20px 16px -20px;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .header-top {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .logo {
+        flex: 1;
+    }
+    
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .logo-text h1 {
+        font-size: 16px !important;
+    }
+    
+    .logo-text p {
+        font-size: 11px !important;
+    }
+    
+    .header-badge {
+        flex-shrink: 0;
+    }
+    
+    .badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    /* Hide desktop nav, show mobile bottom nav */
+    .nav {
+        display: none !important;
+    }
+    
+    /* Bottom Navigation Bar - iOS/Android style */
+    .bottom-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--mobile-nav-height);
+        background: rgba(19, 26, 42, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 1000;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .bottom-nav a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--text-muted);
+        font-size: 10px;
+        gap: 4px;
+        transition: all 0.2s ease;
+        padding: 8px 0;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .bottom-nav a:active {
+        transform: scale(0.92);
+    }
+    
+    .bottom-nav a.active {
+        color: var(--gold);
+    }
+    
+    .bottom-nav a.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background: var(--gold);
+        border-radius: 0 0 4px 4px;
+    }
+    
+    .bottom-nav .nav-icon {
+        font-size: 22px;
+        line-height: 1;
+    }
+    
+    .bottom-nav .nav-text {
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    /* Active indicator dot */
+    .bottom-nav a.active .nav-icon {
+        transform: scale(1.1);
+    }
+    
+    /* Content padding for bottom nav */
+    .container {
+        padding-bottom: calc(var(--mobile-nav-height) + 20px);
+    }
+    
+    /* Cards mobile optimization */
+    .news-card,
+    .scenario-item,
+    .market-summary-card {
+        margin-bottom: 12px;
+        border-radius: 14px;
+        padding: 14px;
+    }
+    
+    .news-title {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .news-summary {
+        font-size: 12px;
+        line-height: 1.4;
+        -webkit-line-clamp: 2;
+    }
+    
+    .section-title {
+        font-size: 15px;
+    }
+    
+    .section-subtitle {
+        font-size: 11px;
+    }
+    
+    /* Market price cards - compact mobile */
+    .price-main {
+        font-size: 28px !important;
+    }
+    
+    .price-change {
+        font-size: 13px !important;
+    }
+    
+    /* API status bar compact */
+    .api-status-bar {
+        font-size: 10px;
+        padding: 10px 12px;
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .api-status-label {
+        white-space: nowrap;
+    }
+    
+    /* Filter tabs scrollable */
+    .filter-tabs {
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 4px;
+    }
+    
+    .filter-tab {
+        flex-shrink: 0;
+        font-size: 11px;
+        padding: 8px 14px;
+        scroll-snap-align: start;
+    }
+    
+    /* Scenario grid 1 column on mobile */
+    .scenario-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    /* News grid 1 column */
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    /* Economic events compact */
+    .event-time {
+        font-size: 11px;
+        min-width: 45px;
+    }
+    
+    .event-content h3 {
+        font-size: 12px;
+    }
+    
+    /* Swipe to refresh indicator */
+    .update-badge {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    
+    /* Pull to refresh */
+    .pull-refresh {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        color: var(--gold);
+        font-size: 12px;
+        gap: 8px;
+    }
+    
+    /* Card press effect */
+    .news-card:active {
+        transform: scale(0.98);
+        background: var(--bg-card-hover);
+    }
+    
+    /* Loading shimmer for mobile */
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    
+    .skeleton {
+        background: linear-gradient(
+            90deg,
+            var(--bg-card) 25%,
+            var(--bg-card-hover) 50%,
+            var(--bg-card) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+        border-radius: 8px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 400px) {
+    .logo-text h1 {
+        font-size: 14px !important;
+    }
+    
+    .bottom-nav .nav-icon {
+        font-size: 20px;
+    }
+    
+    .bottom-nav .nav-text {
+        font-size: 9px;
+    }
+}
+
+/* Landscape phone */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    :root {
+        --mobile-nav-height: 56px;
+    }
+    
+    .bottom-nav a {
+        font-size: 9px;
+    }
+    
+    .bottom-nav .nav-icon {
+        font-size: 18px;
+    }
+}
+
+/* Install prompt banner */
+.install-banner {
+    position: fixed;
+    bottom: var(--mobile-nav-height);
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: #000;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 999;
+    box-shadow: 0 -4px 20px rgba(255, 215, 0, 0.3);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.install-banner.show {
+    transform: translateY(0);
+}
+
+.install-banner-text {
+    flex: 1;
+}
+
+.install-banner-title {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.install-banner-sub {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.install-banner-btn {
+    background: #000;
+    color: var(--gold);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.install-banner-close {
+    background: rgba(0,0,0,0.2);
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Splash screen overlay */
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0a0e17 0%, #1a1a2e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.splash-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.splash-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.splash-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Status bar style for Android */
+@media screen and (max-width: 768px) {
+    meta[name="theme-color"] {
+        background: #0a0e17 !important;
+    }
+    
+    /* Smooth scrolling momentum */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Hide scrollbar but keep functionality */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Status bar area */
+    .status-bar-area {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: env(safe-area-inset-top, 0px);
+        background: rgba(10, 14, 23, 0.9);
+        z-index: 1001;
+    }
+}
