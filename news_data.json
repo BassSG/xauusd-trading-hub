@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-20 00:34:08",
+  "last_updated": "2026-04-20 00:39:09",
   "api_status": {
     "fmp": true,
     "brave": true,
@@ -7,20 +7,6 @@
   },
   "total_articles": 29,
   "articles": [
-    {
-      "id": "ca598261110e",
-      "title": "Gold (XAUUSD) Price Forecast: Price Prediction Hinges on Fed, Inflation, Oil | FXEmpire",
-      "summary": "Gold market gains as oil drops and tensions ease. Gold price forecast tracks Fed outlook, with rate cut odds slipping to 27% and uncertainty rising.",
-      "url": "https://www.fxempire.com/forecasts/article/gold-xauusd-price-forecast-price-prediction-hinges-on-fed-inflation-oil-1592483",
-      "source": "Brave",
-      "publishedAt": "9 hours ago",
-      "category": "war",
-      "api": "Brave",
-      "title_th": "ทองคำ (XAUUSD) ราคา พยากรณ์: ราคา Prediction Hinges on เฟด, เงินเฟ้อ, Oil | FXEmpire",
-      "summary_th": "ทองคำ ตลาด gains as oil drops and tensions ease. ทองคำ ราคา พยากรณ์ tracks เฟด มุมมอง, with rate cut odds slipping to 27% and uncertainty rising.",
-      "time_ago": "9 ชั่วโมงที่แล้ง",
-      "sentiment": "tag-neutral"
-    },
     {
       "id": "89c655eeac08",
       "title": "France Upgrades and Repatriates Gold Reserves",
@@ -370,6 +356,20 @@
       "summary_th": "ทองคำ’s (XAU/USD) remains practically flat, at $4,790 at the time of writing on Friday, lacking a clear bias after pulling back from one-month highs, at $4,871 earlier this week.",
       "time_ago": "2 วันที่แล้ง",
       "sentiment": "tag-bull"
+    },
+    {
+      "id": "ca598261110e",
+      "title": "Gold (XAUUSD) Price Forecast: Price Prediction Hinges on Fed, Inflation, Oil | FXEmpire",
+      "summary": "Gold market gains as oil drops and tensions ease. Gold price forecast tracks Fed outlook, with rate cut odds slipping to 27% and uncertainty rising.",
+      "url": "https://www.fxempire.com/forecasts/article/gold-xauusd-price-forecast-price-prediction-hinges-on-fed-inflation-oil-1592483",
+      "source": "Brave",
+      "publishedAt": "10 hours ago",
+      "category": "war",
+      "api": "Brave",
+      "title_th": "ทองคำ (XAUUSD) ราคา พยากรณ์: ราคา Prediction Hinges on เฟด, เงินเฟ้อ, Oil | FXEmpire",
+      "summary_th": "ทองคำ ตลาด gains as oil drops and tensions ease. ทองคำ ราคา พยากรณ์ tracks เฟด มุมมอง, with rate cut odds slipping to 27% and uncertainty rising.",
+      "time_ago": "10 ชั่วโมงที่แล้ง",
+      "sentiment": "tag-neutral"
     },
     {
       "id": "0dc95ea2e27c",
