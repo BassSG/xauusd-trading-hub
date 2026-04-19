@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 XAUUSD Daily Briefing - Trading Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --gold-dark: #B8860B;
+            --gold-light: #FFF3CD;
+            --bg-dark: #0a0e17;
+            --bg-card: #131a2a;
+            --bg-card-hover: #1a2338;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --bullish: #22c55e;
+            --bearish: #ef4444;
+            --neutral: #eab308;
+            --border: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #1a2744 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 48px;
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold) 0%, #fff 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-text span {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .market-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Price Hero */
+        .price-hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .price-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .price-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .price-card.gold {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 215, 0, 0.05) 100%);
+        }
+
+        .price-label {
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .price-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .price-change {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .price-change.up {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--bullish);
+        }
+
+        .price-change.down {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--bearish);
+        }
+
+        .price-meta {
+            display: flex;
+            gap: 24px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .price-meta-item {
+            font-size: 13px;
+        }
+
+        .price-meta-item span {
+            color: var(--text-secondary);
+        }
+
+        .price-meta-item strong {
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+
+        .col-8 { grid-column: span 8; }
+        .col-6 { grid-column: span 6; }
+        .col-4 { grid-column: span 4; }
+        .col-12 { grid-column: span 12; }
+
+        @media (max-width: 1024px) {
+            .col-8, .col-6, .col-4 { grid-column: span 12; }
+        }
+
+        /* Section */
+        .section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Table */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .table th {
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .table tr:hover td {
+            background: var(--bg-card-hover);
+        }
+
+        .table td {
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge.bullish {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--bullish);
+        }
+
+        .badge.bearish {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--bearish);
+        }
+
+        .badge.neutral {
+            background: rgba(234, 179, 8, 0.15);
+            color: var(--neutral);
+        }
+
+        /* Trend Cards */
+        .trend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .trend-card {
+            background: var(--bg-card-hover);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .trend-card.bullish {
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .trend-card.bearish {
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .trend-timeframe {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .trend-direction {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .trend-strength {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Support/Resistance */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .levels-column h4 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .levels-column.support h4 { color: var(--bullish); }
+        .levels-column.resistance h4 { color: var(--bearish); }
+
+        .level-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--bg-card-hover);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .level-price {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        .level-type {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Economic Events */
+        .event-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background: var(--bg-card-hover);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--border);
+        }
+
+        .event-item.high-impact {
+            border-left-color: var(--bearish);
+        }
+
+        .event-item.medium-impact {
+            border-left-color: var(--neutral);
+        }
+
+        .event-time {
+            min-width: 80px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--gold);
+        }
+
+        .event-content {
+            flex: 1;
+        }
+
+        .event-country {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .event-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .event-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Bias Summary */
+        .bias-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .bias-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .bias-card {
+            background: var(--bg-card-hover);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .bias-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .bias-value {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .bias-confidence {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* TP/SL Levels */
+        .tp-sl-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .tp-sl-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tp-sl-column h4 {
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .tp-sl-column.long h4 { color: var(--bullish); }
+        .tp-sl-column.short h4 { color: var(--bearish); }
+
+        .tp-level {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--bg-card-hover);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tp-level.tp { border-left: 3px solid var(--bullish); }
+        .tp-level.sl { border-left: 3px solid var(--bearish); }
+
+        .tp-label {
+            font-weight: 500;
+        }
+
+        .tp-price {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        .tp-distance {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-left: 12px;
+        }
+
+        /* Summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        .summary-item {
+            background: var(--bg-card-hover);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .summary-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .summary-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .summary-value.gold { color: var(--gold); }
+        .summary-value.bullish { color: var(--bullish); }
+        .summary-value.bearish { color: var(--bearish); }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            padding: 16px;
+            margin-top: 24px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav a:hover, .nav a.active {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* Update Badge */
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--bg-card-hover);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+        }
+
+        .update-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--bullish);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#" class="active">📊 Daily Briefing</a>
+            <a href="daily-briefings/">📰 All Briefings</a>
+            <a href="economic-calendar/">📅 Economic Calendar</a>
+            <a href="gold-analysis/">🔍 Gold Analysis</a>
+            <a href="weekly-reports/">📈 Weekly Reports</a>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <span class="logo-icon">🟡</span>
+                    <div class="logo-text">
+                        <h1>XAUUSD Trading Hub</h1>
+                        <span>Daily Briefing & Analysis</span>
+                    </div>
+                </div>
+                <div class="market-status">
+                    <span class="status-dot"></span>
+                    <span>Weekend - Markets Closed</span>
+                </div>
+            </div>
+
+            <div class="update-badge">
+                Last updated: April 19, 2026 18:30 GMT+7 | Preparing for Week April 20–26, 2026
+            </div>
+
+            <!-- Price Hero -->
+            <div class="price-hero">
+                <div class="price-card gold">
+                    <div class="price-label">Spot Price (XAUUSD)</div>
+                    <div class="price-value">$4,879.60</div>
+                    <div class="price-change up">
+                        <span>📈</span>
+                        <span>+$94.20 (+1.97%)</span>
+                    </div>
+                    <div class="price-meta">
+                        <div class="price-meta-item">
+                            <span>52W High:</span> <strong>$5,586.20</strong>
+                        </div>
+                        <div class="price-meta-item">
+                            <span>52W Low:</span> <strong>$3,125.00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-label">Day High</div>
+                    <div class="price-value" style="color: var(--bullish);">$4,917.70</div>
+                    <div class="price-meta">
+                        <div class="price-meta-item">
+                            <span>Day Low:</span> <strong>$4,785.90</strong>
+                        </div>
+                        <div class="price-meta-item">
+                            <span>Open:</span> <strong>$4,793.95</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-label">ATR (14)</div>
+                    <div class="price-value" style="color: var(--neutral);">$153.63</div>
+                    <div class="price-meta">
+                        <div class="price-meta-item">
+                            <span>ATR %:</span> <strong>3.15%</strong>
+                        </div>
+                        <div class="price-meta-item">
+                            <span>Volatility:</span> <strong>High</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid">
+            <!-- Trend Analysis -->
+            <div class="col-12">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">📈</div>
+                        <h2 class="section-title">Trend Analysis (Multi-Timeframe)</h2>
+                    </div>
+                    <div class="trend-grid">
+                        <div class="trend-card bearish">
+                            <div class="trend-timeframe">15 Min</div>
+                            <div class="trend-direction">🟡 Mixed</div>
+                            <div class="trend-strength">Neutral - Below EMA20</div>
+                        </div>
+                        <div class="trend-card bearish">
+                            <div class="trend-timeframe">1 Hour</div>
+                            <div class="trend-direction">🔴 Bearish</div>
+                            <div class="trend-strength">Moderate - Below EMA20</div>
+                        </div>
+                        <div class="trend-card bearish">
+                            <div class="trend-timeframe">4 Hours</div>
+                            <div class="trend-direction">🔴 Bearish</div>
+                            <div class="trend-strength">Moderate - RSI Pulling Back</div>
+                        </div>
+                        <div class="trend-card bullish">
+                            <div class="trend-timeframe">Daily</div>
+                            <div class="trend-direction">🟢 Bullish</div>
+                            <div class="trend-strength">Strong - Above MA200</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; padding: 16px; background: var(--bg-card-hover); border-radius: 8px;">
+                        <p><strong>HTF Summary:</strong> Uptrend ✅ (Price above MA200 at $4,187) | Phase: Pullback/Consolidation | <strong>Watch:</strong> $4,893.77 (EMA50) - Must reclaim for bullish continuation</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Key Indicators -->
+            <div class="col-6">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">🔑</div>
+                        <h2 class="section-title">Key Technical Indicators</h2>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Indicator</th>
+                                <th>Value</th>
+                                <th>Signal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RSI (14)</td>
+                                <td><strong>73.35</strong></td>
+                                <td><span class="badge bearish">Overbought</span></td>
+                            </tr>
+                            <tr>
+                                <td>EMA20</td>
+                                <td>~$4,880</td>
+                                <td><span class="badge neutral">Mixed</span></td>
+                            </tr>
+                            <tr>
+                                <td>EMA50</td>
+                                <td>$4,893.77</td>
+                                <td><span class="badge bearish">Resistance</span></td>
+                            </tr>
+                            <tr>
+                                <td>MACD</td>
+                                <td>+37.70</td>
+                                <td><span class="badge bullish">Bullish</span></td>
+                            </tr>
+                            <tr>
+                                <td>ATR (14)</td>
+                                <td>$153.63</td>
+                                <td><span class="badge neutral">High Volatility</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <!-- Market Sentiment -->
+            <div class="col-6">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">🎯</div>
+                        <h2 class="section-title">Market Sentiment</h2>
+                    </div>
+                    <div class="bias-grid">
+                        <div class="bias-card">
+                            <div class="bias-label">Short-Term (1-3D)</div>
+                            <div class="bias-value" style="color: var(--bearish);">BEARISH</div>
+                            <div class="bias-confidence">Confidence: 65%</div>
+                        </div>
+                        <div class="bias-card">
+                            <div class="bias-label">Medium-Term (1-4W)</div>
+                            <div class="bias-value" style="color: var(--neutral);">NEUTRAL</div>
+                            <div class="bias-confidence">Confidence: 55%</div>
+                        </div>
+                        <div class="bias-card">
+                            <div class="bias-label">Long-Term (1-3M)</div>
+                            <div class="bias-value" style="color: var(--bullish);">BULLISH</div>
+                            <div class="bias-confidence">Confidence: 70%</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; padding: 16px; background: var(--bg-card-hover); border-radius: 8px;">
+                        <p><strong>Overall Bias:</strong> <span style="color: var(--neutral);">NEUTRAL-BEARISH</span> (Short-term) | Confidence: 65%</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Support/Resistance -->
+            <div class="col-12">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">📍</div>
+                        <h2 class="section-title">Support & Resistance Levels</h2>
+                    </div>
+                    <div class="levels-grid">
+                        <div class="levels-column support">
+                            <h4>🟢 Support Zones (Buy)</h4>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$4,742.40</div>
+                                    <div class="level-type">Daily Low / Psychological</div>
+                                </div>
+                                <span class="badge neutral">Medium</span>
+                            </div>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$4,726.00</div>
+                                    <div class="level-type">Weekly Pivot</div>
+                                </div>
+                                <span class="badge neutral">Medium</span>
+                            </div>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$4,375.50</div>
+                                    <div class="level-type">Major Support</div>
+                                </div>
+                                <span class="badge bullish">Strong</span>
+                            </div>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$4,187.00</div>
+                                    <div class="level-type">MA200</div>
+                                </div>
+                                <span class="badge bullish">Very Strong</span>
+                            </div>
+                        </div>
+                        <div class="levels-column resistance">
+                            <h4>🔴 Resistance Zones (Sell)</h4>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$4,893.77</div>
+                                    <div class="level-type">EMA50</div>
+                                </div>
+                                <span class="badge bearish">Strong</span>
+                            </div>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$4,917.70</div>
+                                    <div class="level-type">Day High</div>
+                                </div>
+                                <span class="badge bearish">Strong</span>
+                            </div>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$5,065.30</div>
+                                    <div class="level-type">Previous High</div>
+                                </div>
+                                <span class="badge bearish">Strong</span>
+                            </div>
+                            <div class="level-item">
+                                <div>
+                                    <div class="level-price">$5,229.70</div>
+                                    <div class="level-type">Major Resistance</div>
+                                </div>
+                                <span class="badge bearish">Very Strong</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TP/SL Levels -->
+            <div class="col-12">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">⚠️</div>
+                        <h2 class="section-title">Risk Factors & ATR-Based TP/SL Levels</h2>
+                    </div>
+                    <div class="tp-sl-grid">
+                        <div class="tp-sl-column long">
+                            <h4>📈 Long Position (Buy) @ $4,879.60</h4>
+                            <div class="tp-level tp">
+                                <span class="tp-label">TP1</span>
+                                <span><span class="tp-price">$4,950.00</span><span class="tp-distance">+$70.40</span></span>
+                            </div>
+                            <div class="tp-level tp">
+                                <span class="tp-label">TP2</span>
+                                <span><span class="tp-price">$5,000.00</span><span class="tp-distance">+$120.40</span></span>
+                            </div>
+                            <div class="tp-level tp">
+                                <span class="tp-label">TP3</span>
+                                <span><span class="tp-price">$5,065.30</span><span class="tp-distance">+$185.70</span></span>
+                            </div>
+                            <div class="tp-level sl">
+                                <span class="tp-label">SL</span>
+                                <span><span class="tp-price">$4,726.00</span><span class="tp-distance">-$153.60</span></span>
+                            </div>
+                        </div>
+                        <div class="tp-sl-column short">
+                            <h4>📉 Short Position (Sell) @ $4,879.60</h4>
+                            <div class="tp-level tp">
+                                <span class="tp-label">TP1</span>
+                                <span><span class="tp-price">$4,800.00</span><span class="tp-distance">-$79.60</span></span>
+                            </div>
+                            <div class="tp-level tp">
+                                <span class="tp-label">TP2</span>
+                                <span><span class="tp-price">$4,742.40</span><span class="tp-distance">-$137.20</span></span>
+                            </div>
+                            <div class="tp-level tp">
+                                <span class="tp-label">TP3</span>
+                                <span><span class="tp-price">$4,700.00</span><span class="tp-distance">-$179.60</span></span>
+                            </div>
+                            <div class="tp-level sl">
+                                <span class="tp-label">SL</span>
+                                <span><span class="tp-price">$5,033.23</span><span class="tp-distance">+$153.63</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Economic Calendar -->
+            <div class="col-12">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">📅</div>
+                        <h2 class="section-title">Economic Calendar (This Week)</h2>
+                    </div>
+
+                    <h4 style="margin: 20px 0 16px; color: var(--bearish);">🔴 HIGH IMPACT Events</h4>
+
+                    <div class="event-item high-impact">
+                        <div class="event-time">Apr 20<br>13:45</div>
+                        <div class="event-content">
+                            <div class="event-country">🇨🇦 CANADA</div>
+                            <div class="event-name">BoC Interest Rate Decision</div>
+                            <div class="event-meta">Previous: 2.25% | <strong>High Impact</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="event-item high-impact">
+                        <div class="event-time">Apr 23<br>19:00</div>
+                        <div class="event-content">
+                            <div class="event-country">🇺🇸 USA</div>
+                            <div class="event-name">FOMC Meeting Minutes</div>
+                            <div class="event-meta"><strong>High Impact</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="event-item high-impact">
+                        <div class="event-time">Apr 23<br>21:00</div>
+                        <div class="event-content">
+                            <div class="event-country">🇺🇸 USA</div>
+                            <div class="event-name">Fed Chair Speech</div>
+                            <div class="event-meta"><strong>High Impact</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="event-item high-impact">
+                        <div class="event-time">Apr 24<br>09:00</div>
+                        <div class="event-content">
+                            <div class="event-country">🇪🇺 EUROPE</div>
+                            <div class="event-name">ECB Main Refinancing Rate</div>
+                            <div class="event-meta"><strong>High Impact</strong></div>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 24px 0 16px; color: var(--neutral);">🟡 MEDIUM IMPACT Events</h4>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
+                        <div class="event-item medium-impact" style="margin-bottom: 0;">
+                            <div class="event-time">Apr 20</div>
+                            <div class="event-content">
+                                <div class="event-name">🇩🇪 PPI YoY (Germany)</div>
+                            </div>
+                        </div>
+                        <div class="event-item medium-impact" style="margin-bottom: 0;">
+                            <div class="event-time">Apr 21</div>
+                            <div class="event-content">
+                                <div class="event-name">🇪🇺 German Ifo Business Climate</div>
+                            </div>
+                        </div>
+                        <div class="event-item medium-impact" style="margin-bottom: 0;">
+                            <div class="event-time">Apr 22</div>
+                            <div class="event-content">
+                                <div class="event-name">🇺🇸 Crude Oil Inventories</div>
+                            </div>
+                        </div>
+                        <div class="event-item medium-impact" style="margin-bottom: 0;">
+                            <div class="event-time">Apr 24</div>
+                            <div class="event-content">
+                                <div class="event-name">🇺🇸 Consumer Confidence</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Trading Bias Summary -->
+            <div class="col-12">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">📋</div>
+                        <h2 class="section-title">Trading Plan Summary</h2>
+                    </div>
+
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">Price Action</div>
+                            <div class="summary-value gold">$4,879.60</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Trend</div>
+                            <div class="summary-value bullish">Daily Bullish</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">RSI</div>
+                            <div class="summary-value bearish">73.35 Overbought</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">MACD</div>
+                            <div class="summary-value bullish">+37.70</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Support</div>
+                            <div class="summary-value">$4,742 | $4,375 | $4,187</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Resistance</div>
+                            <div class="summary-value">$4,893 | $4,917 | $5,065</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                        <div style="padding: 16px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px;">
+                            <strong style="color: var(--bearish);">🔴 Short-Term:</strong> SELL on rallies toward $4,893-4,917<br>
+                            <small>Target: $4,742-4,785 | Stop: Above $5,033 | Confidence: 65%</small>
+                        </div>
+                        <div style="padding: 16px; background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); border-radius: 8px;">
+                            <strong style="color: var(--neutral);">🟡 Medium-Term:</strong> NEUTRAL - Range Bound<br>
+                            <small>Range: $4,700-$5,065 | Sell R3, Buy S2 | Confidence: 55%</small>
+                        </div>
+                        <div style="padding: 16px; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 8px;">
+                            <strong style="color: var(--bullish);">🟢 Long-Term:</strong> BUY on dips toward $4,187<br>
+                            <small>Target: Above $5,586 | Stop: Below $4,000 | Confidence: 70%</small>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Key Scenarios -->
+            <div class="col-12">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon">🎭</div>
+                        <h2 class="section-title">Key Scenarios to Watch</h2>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Scenario</th>
+                                <th>Trigger</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge bullish">Bull Break</span></td>
+                                <td>Close above <strong>$4,917</strong></td>
+                                <td>Buy toward $5,000-5,065</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge bearish">Bear Break</span></td>
+                                <td>Close below <strong>$4,742</strong></td>
+                                <td>Sell toward $4,375-4,187</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge neutral">Range Bound</span></td>
+                                <td>$4,742 - $4,917</td>
+                                <td>Sell top, buy bottom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            ⚠️ <strong>Disclaimer:</strong> This briefing is for informational purposes only. Trading XAUUSD carries significant risk. 
+            Past performance does not guarantee future results. Always conduct your own analysis and consult a licensed financial advisor before making trading decisions.
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>📊 <strong>XAUUSD Trading Hub</strong> | Data: FMP API | Generated: April 19, 2026 18:30 GMT+7</p>
+            <p style="margin-top: 8px;">Powered by <a href="https://github.com/BassSG/xauusd-trading-hub" target="_blank">GitHub</a> | <a href="https://BassSG.github.io/xauusd-trading-hub/" target="_blank">Live Dashboard</a></p>
+        </footer>
+    </div>
+</body>
+</html>
