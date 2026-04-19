@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Gold Analysis - XAUUSD Trading Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html"><span class="icon">📊</span><span class="text">Dashboard</span></a>
+            <a href="daily-briefings.html"><span class="icon">📰</span><span class="text">Daily</span></a>
+            <a href="economic-calendar.html"><span class="icon">📅</span><span class="text">Calendar</span></a>
+            <a href="gold-analysis.html" class="active"><span class="icon">🔍</span><span class="text">Analysis</span></a>
+            <a href="weekly-reports.html"><span class="icon">📈</span><span class="text">Weekly</span></a>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">🔍</div>
+                    <div class="logo-text">
+                        <h1>Gold Technical Analysis</h1>
+                        <p>XAUUSD Deep Dive | April 19, 2026</p>
+                    </div>
+                </div>
+                <div class="header-badge">
+                    <span class="badge badge-gold">
+                        <span class="status-dot gold"></span>
+                        Live Data
+                    </span>
+                    <span class="badge badge-bull">
+                        Bullish LT
+                    </span>
+                </div>
+            </div>
+            <div class="update-badge">
+                Last updated: April 18, 2026 03:59 UTC | ATR: $153.63 | Volatility: 3.15%
+            </div>
+        </header>
+
+        <!-- Price Overview -->
+        <div class="grid grid-4" style="margin-bottom: 24px;">
+            <div class="price-card gold">
+                <div class="price-label">Current Price</div>
+                <div class="price-value">$4,879.60</div>
+                <div class="price-change up">📈 +$94.20 (+1.97%)</div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">52-Week High</div>
+                <div class="price-value" style="color: var(--bullish);">$5,586.20</div>
+                <div class="price-meta"><span>Distance: -12.6%</span></div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">52-Week Low</div>
+                <div class="price-value" style="color: var(--bearish);">$3,125.00</div>
+                <div class="price-meta"><span>Distance: +56.1%</span></div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">Day Range</div>
+                <div class="price-value" style="color: var(--text-secondary);">$4,785 - $4,917</div>
+                <div class="price-meta"><span>Range: $131.70</span></div>
+            </div>
+        </div>
+
+        <!-- Key Indicators -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div>
+                    <h2 class="section-title">Key Technical Indicators</h2>
+                    <p class="section-subtitle">RSI, MACD, Moving Averages & Volatility</p>
+                </div>
+            </div>
+
+            <div class="card-grid" style="margin-bottom: 24px;">
+                <div class="card bearish">
+                    <div class="card-label">RSI (14)</div>
+                    <div class="card-value bear">73.35</div>
+                    <div class="card-sub">Overbought Territory</div>
+                </div>
+                <div class="card bullish">
+                    <div class="card-label">MACD</div>
+                    <div class="card-value bull">+37.70</div>
+                    <div class="card-sub">Bullish Momentum</div>
+                </div>
+                <div class="card bullish">
+                    <div class="card-label">Signal Line</div>
+                    <div class="card-value bull">+37.70</div>
+                    <div class="card-sub">Converging</div>
+                </div>
+                <div class="card neutral">
+                    <div class="card-label">ATR (14)</div>
+                    <div class="card-value neutral">$153.63</div>
+                    <div class="card-sub">High Volatility</div>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Indicator</th>
+                            <th>Value</th>
+                            <th>Signal</th>
+                            <th>Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RSI (14)</strong></td>
+                            <td>73.35</td>
+                            <td><span class="tag tag-bear">Overbought</span></td>
+                            <td>Above 70 = overbought territory, potential correction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EMA20</strong></td>
+                            <td>~$4,880</td>
+                            <td><span class="tag tag-neutral">Testing</span></td>
+                            <td>Price testing as resistance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EMA50</strong></td>
+                            <td>$4,893.77</td>
+                            <td><span class="tag tag-bear">Resistance</span></td>
+                            <td>Major hurdle for bullish continuation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MA200</strong></td>
+                            <td>$4,187.00</td>
+                            <td><span class="tag tag-bull">Support</span></td>
+                            <td>Strong support, uptrend intact</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MACD</strong></td>
+                            <td>+37.70</td>
+                            <td><span class="tag tag-bull">Bullish</span></td>
+                            <td>Positive histogram, momentum weakening</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ATR %</strong></td>
+                            <td>3.15%</td>
+                            <td><span class="tag tag-neutral">High</span></td>
+                            <td>High volatility = wider SL/TP needed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Support & Resistance -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">📍</div>
+                <div>
+                    <h2 class="section-title">Support & Resistance Levels</h2>
+                    <p class="section-subtitle">Key price levels based on technical analysis</p>
+                </div>
+            </div>
+
+            <div class="levels-grid">
+                <div class="levels-column support">
+                    <h4><span class="dot"></span> Support Zones (Buy Areas)</h4>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$4,742.40</div>
+                            <div class="level-type">Daily Low / Psychological</div>
+                        </div>
+                        <span class="tag tag-neutral">Medium</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$4,726.00</div>
+                            <div class="level-type">Weekly Pivot</div>
+                        </div>
+                        <span class="tag tag-neutral">Medium</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$4,375.50</div>
+                            <div class="level-type">Major Support Zone</div>
+                        </div>
+                        <span class="tag tag-bull">Strong</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$4,187.00</div>
+                            <div class="level-type">MA200 - Key Support</div>
+                        </div>
+                        <span class="tag tag-bull">Very Strong</span>
+                    </div>
+                </div>
+                <div class="levels-column resistance">
+                    <h4><span class="dot"></span> Resistance Zones (Sell Areas)</h4>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$4,893.77</div>
+                            <div class="level-type">EMA50</div>
+                        </div>
+                        <span class="tag tag-bear">Strong</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$4,917.70</div>
+                            <div class="level-type">Day High</div>
+                        </div>
+                        <span class="tag tag-bear">Strong</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$5,065.30</div>
+                            <div class="level-type">Previous High</div>
+                        </div>
+                        <span class="tag tag-bear">Strong</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$5,229.70</div>
+                            <div class="level-type">Major Resistance</div>
+                        </div>
+                        <span class="tag tag-bear">Very Strong</span>
+                    </div>
+                    <div class="level-item">
+                        <div>
+                            <div class="level-price">$5,586.20</div>
+                            <div class="level-type">52-Week High</div>
+                        </div>
+                        <span class="tag tag-bear">Extreme</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volume Analysis -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">📈</div>
+                <div>
+                    <h2 class="section-title">Volume & Range Analysis</h2>
+                    <p class="section-subtitle">Trading activity and price range metrics</p>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-label">Current Volume</div>
+                        <div class="card-value">130,225</div>
+                        <div class="card-sub">Above average (11,409)</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-label">Avg Volume (20d)</div>
+                        <div class="card-value">11,409</div>
+                        <div class="card-sub">Low activity</div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-label">5-Day High</div>
+                        <div class="card-value gold">$4,879.60</div>
+                        <div class="card-sub">Current price at 5D high</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-label">5-Day Low</div>
+                        <div class="card-value">$4,742.40</div>
+                        <div class="card-sub">Range: $137.20</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+                <div class="card-label" style="margin-bottom: 12px;">20-Day Price Range</div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="color: var(--bullish);">$4,375.50 (Low)</span>
+                    <span style="color: var(--gold);">$4,879.60 (Current)</span>
+                    <span style="color: var(--bearish);">$4,879.60 (High)</span>
+                </div>
+                <div style="height: 8px; background: var(--bg-card-hover); border-radius: 4px; position: relative;">
+                    <div style="position: absolute; left: 0; top: 0; height: 100%; width: 100%; background: linear-gradient(90deg, var(--bullish) 0%, var(--gold) 50%, var(--bearish) 100%); border-radius: 4px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Indicator Interpretation -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">💡</div>
+                <div>
+                    <h2 class="section-title">Analysis Summary</h2>
+                    <p class="section-subtitle">Overall market assessment and key observations</p>
+                </div>
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-item bull">
+                    <div class="scenario-title">🟢 Bullish Factors</div>
+                    <div class="scenario-content">
+                        • Price above MA200 ($4,187) - uptrend intact<br>
+                        • MACD still positive momentum<br>
+                        • Higher highs and higher lows pattern<br>
+                        • 52-week range shows strength
+                    </div>
+                </div>
+                <div class="scenario-item bear">
+                    <div class="scenario-title">🔴 Bearish Factors</div>
+                    <div class="scenario-content">
+                        • RSI at 73.35 - overbought territory<br>
+                        • Below EMA50 ($4,893.77)<br>
+                        • High ATR indicates potential correction<br>
+                        • Weekend thin liquidity risk
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 20px; background: var(--bg-card-hover); border-radius: 12px; border: 1px solid var(--border);">
+                <h4 style="margin-bottom: 12px;">🎯 Overall Assessment</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    Gold is in a <strong style="color: var(--bullish);">bullish long-term uptrend</strong> but showing 
+                    <strong style="color: var(--bearish);">short-term overbought conditions</strong> with RSI above 70. 
+                    The $4,893-4,917 zone remains a critical resistance area to watch. A sustained break above this zone 
+                    would confirm continued bullish momentum toward $5,065 and eventually $5,229. Alternatively, a pullback 
+                    toward $4,742-4,726 would offer better risk/reward for new long positions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            ⚠️ <strong>Disclaimer:</strong> This technical analysis is for informational purposes only. 
+            Technical indicators lag and can give false signals. Trading XAUUSD carries significant risk. 
+            Always conduct your own analysis and consult a licensed financial advisor before making trading decisions.
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">🟡</div>
+            <p class="footer-text">
+                <strong>XAUUSD Trading Hub</strong> | Data: FMP API | April 19, 2026
+            </p>
+            <p class="footer-text" style="margin-top: 8px;">
+                <a href="https://github.com/BassSG/xauusd-trading-hub" target="_blank">GitHub</a> | 
+                <a href="https://BassSG.github.io/xauusd-trading-hub/" target="_blank">Dashboard</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
