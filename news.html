@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📰 Gold News - XAUUSD Trading Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/components/ui-components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html"><span class="icon">📊</span><span class="text">Dashboard</span></a>
+            <a href="daily-briefings.html"><span class="icon">📰</span><span class="text">Daily</span></a>
+            <a href="economic-calendar.html"><span class="icon">📅</span><span class="text">Calendar</span></a>
+            <a href="gold-analysis.html"><span class="icon">🔍</span><span class="text">Analysis</span></a>
+            <a href="news.html" class="active"><span class="icon">📰</span><span class="text">News</span></a>
+            <a href="weekly-reports.html"><span class="icon">📈</span><span class="text">Weekly</span></a>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">📰</div>
+                    <div class="logo-text">
+                        <h1>Gold News Center</h1>
+                        <p>XAUUSD Trading Hub - ข่าวทองคำล่าสุด</p>
+                    </div>
+                </div>
+                <div class="header-badge">
+                    <span class="badge badge-gold">
+                        <span class="status-dot gold"></span>
+                        Live Updates
+                    </span>
+                    <span class="badge badge-neutral">
+                        April 19, 2026
+                    </span>
+                </div>
+            </div>
+            <div class="update-badge">
+                Last updated: April 19, 2026 21:00 GMT+7 | 12 Latest Articles
+            </div>
+        </header>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-4" style="margin-bottom: 24px;">
+            <div class="price-card gold">
+                <div class="price-label">Spot Price (XAUUSD)</div>
+                <div class="price-value">$4,879.60</div>
+                <div class="price-change up">📈 +1.97% This Week</div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">52W High</div>
+                <div class="price-value" style="color: var(--bullish);">$5,586.20</div>
+                <div class="price-meta"><span>All Time High</span></div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">News Articles</div>
+                <div class="price-value" style="color: var(--text-secondary);">12</div>
+                <div class="price-meta"><span>Latest 7 Days</span></div>
+            </div>
+            <div class="price-card">
+                <div class="price-label">ATR Volatility</div>
+                <div class="price-value" style="color: var(--neutral);">$153.63</div>
+                <div class="price-meta"><span>High Volatility</span></div>
+            </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="section" style="margin-bottom: 24px;">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">📊 ทั้งหมด</button>
+                <button class="filter-tab" data-category="price">💰 ราคาทอง</button>
+                <button class="filter-tab" data-category="fed">🏦 Fed/ธนาคารกลาง</button>
+                <button class="filter-tab" data-category="war">⚔️ สงคราม/ภูมิรัฐศาสตร์</button>
+                <button class="filter-tab" data-category="inflation">📈 เงินเฟ้อ</button>
+            </div>
+        </div>
+
+        <!-- Price News Section -->
+        <section class="section" id="price-section">
+            <div class="section-header">
+                <div class="section-icon">💰</div>
+                <div>
+                    <h2 class="section-title">ราคาทองคำ (Gold Price)</h2>
+                    <p class="section-subtitle">ข่าววิเคราะห์ราคาทองคำและการเคลื่อนไหวของตลาด</p>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <a href="https://www.fxstreet.com/analysis/gold-surges-past-4-850-as-hormuz-reopening-crushes-the-us-dollar-20260417" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXStreet</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">ทองคำพุ่งแตะ $4,850 ขณะที่การเปิดใช้ช่องทางฮอร์มุซทำให้ดอลลาร์อ่อนตัวลงอย่างหนัก</h3>
+                    <p class="news-summary">ราคาทองคำพุ่งเกิน $4,850 หลังจากข่าวการเปิดใช้ช่องทางฮอร์มุซ (Hormuz) ทำให้ดอลลาร์สหรัฐอ่อนตัวลงอย่างมีนัยสำคัญ ตลาดตอบรับข่าวดีต่อการส่งออกน้ำมันจากอ่าวเปอร์เซีย</p>
+                    <span class="news-tag tag-bull">Bullish</span>
+                </a>
+
+                <a href="https://www.forex.com/analysis/gold-price-short-term-outlook-xauusd-surges-19-percent-bulls-test-key-resistance" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FOREX.com</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">มุมมองราคาทองระยะสั้น: XAU/USD พุ่ง 19% - กระทิงทดสอบแนวต้านสำคัญ</h3>
+                    <p class="news-summary">ราคาทองคำพุ่งขึ้น 19% สะท้อนการกลับมาของตลาดกระทิง ทองคำกำลังทดสอบแนวต้านสำคัญในระดับ $4,900 โดยนักวิเคราะห์มองว่าหากผ่านได้จะมีเป้าหมายถัดไปที่ $5,000</p>
+                    <span class="news-tag tag-bull">Bullish</span>
+                </a>
+
+                <a href="https://www.fxempire.com/analysis/gold-xauusd-price-forecast-bullish-momentum-builds-beneath-major-resistance" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXEmpire</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: โมเมนตัมกระทิงสะสมใต้แนวต้านหลัก</h3>
+                    <p class="news-summary">โมเมนตัมขาขึ้นกำลังสะสมใต้แนวต้านหลัก นักลงทุนรายใหญ่ยังคงมองว่าทองคำเป็นสินทรัพย์ปลอดภัยที่น่าสนใจในสภาพแวดล้อมตลาดปัจจุบัน</p>
+                    <span class="news-tag tag-bull">Bullish</span>
+                </a>
+
+                <a href="https://www.marketpulse.com/analysis/chart-alert-gold-xauusd-potential-bullish-breakout-above-4900" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">marketpulse.com</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">Chart Alert: ทองคำมีโอกาส breakout ขาขึ้นเหนือ $4,900</h3>
+                    <p class="news-summary">คำเตือนทางเทคนิค: ราคาทองคำกำลังทดสอบระดับ $4,900 หากสามารถปิดเหนือระดับนี้ได้อย่างแข็งแกร่ง จะเป็นสัญญาณบวกที่ชัดเจนสำหรับแนวโน้มขาขึ้น</p>
+                    <span class="news-tag tag-neutral">Technical</span>
+                </a>
+
+                <a href="https://www.fxstreet.com/analysis/gold-price-forecast-xauusd-hovers-below-4850-with-us-iran-peace-talks-in-focus" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXStreet</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: XAU/USD แกว่งใต้ $4,850 ขณะติดตามการเจรจาสันติภาพสหรัฐ-อิหร่าน</h3>
+                    <p class="news-summary">ราคาทองคำแกว่งใต้ระดับ $4,850 ขณะที่ตลาดจับตาการเจรจาสันติภาพสหรัฐ-อิหร่านอย่างใกล้ชิด ความคืบหน้าในการเจรจาอาจส่งผลต่อราคาทองคำอย่างมีนัยสำคัญ</p>
+                    <span class="news-tag tag-neutral">Neutral</span>
+                </a>
+
+                <a href="https://www.fxstreet.com/analysis/gold-price-forecast-xauusd-losing-steam-below-4800" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXStreet</span>
+                        <span class="news-date">April 16, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: XAU/USD เริ่มอ่อนแรงใต้ $4,800</h3>
+                    <p class="news-summary">ราคาทองคำเริ่มสูญเสียแรงขับเคลื่อนเมื่อลงมาใกล้ระดับ $4,800 นักวิเคราะห์เตือนว่าหากไม่สามารถรักษาระดับนี้ได้ อาจเห็นการย่อตัวลึกขึ้น</p>
+                    <span class="news-tag tag-bear">Bearish</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Fed/Central Bank Section -->
+        <section class="section" id="fed-section">
+            <div class="section-header">
+                <div class="section-icon">🏦</div>
+                <div>
+                    <h2 class="section-title">นโยบายธนาคารกลางและ Fed</h2>
+                    <p class="section-subtitle">ข่าวเกี่ยวกับนโยบายการเงินและธนาคารกลางที่ส่งผลต่อราคาทอง</p>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <a href="https://www.fxempire.com/analysis/gold-xauusd-price-forecast-price-prediction-hinges-on-fed-inflation-oil" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXEmpire</span>
+                        <span class="news-date">April 19, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: การคาดการณ์ราคาขึ้นอยู่กับ Fed เงินเฟ้อ และน้ำมัน</h3>
+                    <p class="news-summary">นักวิเคราะห์ระบุว่าทิศทางราคาทองคำในระยะข้างหน้าจะขึ้นอยู่กับ 3 ปัจจัยหลัก: นโยบายของ Fed, อัตราเงินเฟ้อ และราคาน้ำมัน ตลาดกำลังรอคำสั่งซื้อสินค้าคงทนและข้อมูลการจ้างงาน</p>
+                    <span class="news-tag tag-neutral">Analysis</span>
+                </a>
+
+                <a href="https://www.forex.com/analysis/gold-forecast-xauusd-still-not-out-of-woods-despite-big-bounce" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FOREX.com</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ทอง: XAU/USD ยังไม่ปลอดภัยแม้จะกระโดดขึ้นมาก</h3>
+                    <p class="news-summary">แม้ราคาทองจะกระโดดขึ้นมาอย่างมาก แต่นักวิเคราะห์เตือนว่ายังมีความเสี่ยงในระยะสั้น ตลาดควรระวังการย่อตัวหลังจากการพุ่งขึ้นแบบหนัก</p>
+                    <span class="news-tag tag-bear">Bearish</span>
+                </a>
+
+                <a href="https://www.litefinance.org/analysis/gold-xauusd-price-forecast-today-tomorrow-next-week" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">LiteFinance</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง (XAU/USD) วันนี้ พรุ่งนี้ และสัปดาห์หน้า</h3>
+                    <p class="news-summary">รายงานพยากรณ์ราคาทองคำแบบครอบคลุม ทั้งระยะสั้น ระยะกลาง และระยะยาว โดยคำนึงถึงปัจจัยพื้นฐานและปัจจัยทางเทคนิคประกอบการตัดสินใจ</p>
+                    <span class="news-tag tag-neutral">Forecast</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- War/Geopolitical Section -->
+        <section class="section" id="war-section">
+            <div class="section-header">
+                <div class="section-icon">⚔️</div>
+                <div>
+                    <h2 class="section-title">สงครามและภูมิรัฐศาสตร์ (Geopolitical)</h2>
+                    <p class="section-subtitle">ข่าวความตึงเครียดทางทหารและความขัดแย้งที่ส่งผลต่อราคาทอง</p>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <a href="https://www.fxstreet.com/analysis/gold-forecast-xauusd-downside-resumes-as-middle-east-war-expands" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXStreet</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ทอง: แนวโน้มขาลงกลับมาขณะสงครามตะวันออกกลางขยายตัว</h3>
+                    <p class="news-summary">ราคาทองกลับมาเผชิญแรงขายเมื่อสงครามในตะวันออกกลางขยายตัว สถานการณ์ทางทหารที่รุนแรงขึ้นอาจส่งผลให้ทองคำกลับมาเป็นสินทรัพย์สวยอย่างปลอดภัย</p>
+                    <span class="news-tag tag-bear">Bearish</span>
+                </a>
+
+                <a href="https://www.fxstreet.com/analysis/gold-forecast-xauusd-crumbles-as-gulf-war-escalates" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXStreet</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ทอง: XAU/USD ร่วงลงขณะสงครามอ่าวเปอร์เซียรุนแรงขึ้น</h3>
+                    <p class="news-summary">ราคาทองคำร่วงลงอย่างหนักเมื่อความขัดแย้งในอ่าวเปอร์เซียทวีความรุนแรงขึ้น นักลงทุนต่างเทขายสินทรัพย์เสี่ยงเพื่อถือเงินสด</p>
+                    <span class="news-tag tag-bear">Bearish</span>
+                </a>
+
+                <a href="https://www.fxstreet.com/analysis/gold-price-forecast-xauusd-holds-steady-near-4850-amid-hopes-of-new-peace-talks" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXStreet</span>
+                        <span class="news-date">April 16, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: XAU/USD ทรงตัวใกล้ $4,850 ท่ามกลางความหวังการเจรจาสันติภาพใหม่</h3>
+                    <p class="news-summary">ราคาทองคำทรงตัวใกล้ระดับ $4,850 ท่ามกลางความหวังว่าการเจรจาสันติภาพใหม่อาจช่วยลดความตึงเครียดในภูมิภาค</p>
+                    <span class="news-tag tag-bull">Bullish</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Inflation Section -->
+        <section class="section" id="inflation-section">
+            <div class="section-header">
+                <div class="section-icon">📈</div>
+                <div>
+                    <h2 class="section-title">เงินเฟ้อและปัจจัยพื้นฐาน (Inflation & Fundamentals)</h2>
+                    <p class="section-subtitle">ข่าวเกี่ยวกับเงินเฟ้อ เศรษฐกิจ และปัจจัยพื้นฐานที่ส่งผลต่อราคาทอง</p>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <a href="https://www.fxempire.com/analysis/gold-xauusd-price-forecast-will-dollar-weakness-push-gold-through-50-day-ma" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXEmpire</span>
+                        <span class="news-date">April 16, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: ความอ่อนตัวของดอลลาร์จะผลักดันทองคำผ่าน MA 50 วันหรือไม่?</h3>
+                    <p class="news-summary">คำถามสำคัญคือหากดอลลาร์สหรัฐอ่อนตัวลงต่อเนื่อง จะเป็นแรงผลักดันให้ทองคำผ่านเส้นค่าเฉลี่ย 50 วันได้หรือไม่ นักวิเคราะห์กำลังจับตา</p>
+                    <span class="news-tag tag-neutral">Technical</span>
+                </a>
+
+                <a href="https://www.fxempire.com/analysis/gold-xauusd-price-forecast-xauusd-defends-trendline-can-bulls-reclaim-4870" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXEmpire</span>
+                        <span class="news-date">April 17, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทองและเงิน: XAUUSD ป้องกันเส้นแนวโน้ม - กระทิงกลับมาได้ไหม?</h3>
+                    <p class="news-summary">ทองคำยืนรับบริเวณเส้นแนวโน้มสำคัญ คำถามคือนักซื้อสามารถพาราคากลับขึ้นเหนือ $4,870 ได้หรือไม่</p>
+                    <span class="news-tag tag-neutral">Technical</span>
+                </a>
+
+                <a href="https://www.fxempire.com/analysis/gold-xauusd-price-forecast-gold-market-faces-bearish-pressure-if-oil-stays-above-100" target="_blank" class="news-card">
+                    <div class="news-meta">
+                        <span class="news-source">FXEmpire</span>
+                        <span class="news-date">April 16, 2026</span>
+                    </div>
+                    <h3 class="news-title">พยากรณ์ราคาทอง: ตลาดทองเผชิญแรงกดดันขาลงหากน้ำมันอยู่เหนือ $100</h3>
+                    <p class="news-summary">หากราคาน้ำมันยังคงอยู่เหนือ $100 ต่อบาร์เรล จะสร้างแรงกดดันด้านเงินเฟ้อซึ่งอาจบีบให้ Fed ขึ้นอัตราดอกเบี้ย และส่งผลลบต่อราคาทองคำ</p>
+                    <span class="news-tag tag-bear">Bearish</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Market Sentiment Summary -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div>
+                    <h2 class="section-title">สรุปความเชื่อมั่นตลาด (Market Sentiment Summary)</h2>
+                    <p class="section-subtitle">ภาพรวมความเชื่อมั่นของนักลงทุนจากข่าวล่าสุด</p>
+                </div>
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-item bull">
+                    <div class="scenario-title">📈 ปัจจัยบวก (Bullish Factors)</div>
+                    <div class="scenario-content">
+                        <ul>
+                            <li>💰 ดอลลาร์สหรัฐอ่อนตัว</li>
+                            <li>🟡 การเจรจาสันติภาพ US-Iran</li>
+                            <li>📊 โมเมนตัมขาขึ้นสะสม</li>
+                            <li>🎯 แนวต้าน $4,900 ใกล้มาก</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scenario-item bear">
+                    <div class="scenario-title">📉 ปัจจัยลบ (Bearish Factors)</div>
+                    <div class="scenario-content">
+                        <ul>
+                            <li>⚔️ สงครามอ่าวเปอร์เซียขยายตัว</li>
+                            <li>📊 RSI Overbought (73.35)</li>
+                            <li>🛢️ น้ำมันเหนือ $100</li>
+                            <li>🏦 Fed อาจขึ้นดอกเบี้ย</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 16px; background: var(--bg-card-hover); border-radius: 10px;">
+                <p style="color: var(--text-secondary);">
+                    <strong>📋 สรุป:</strong> ข่าวล่าสุดส่วนใหญ่มองว่าราคาทองยังคงมีแนวโน้มขาขึ้นระยะยาว แต่ในระยะสั้นมีความเสี่ยงจากสงครามและความตึงเครียดทางภูมิรัฐศาสตร์ 
+                    <strong style="color: var(--gold);">แนวรับสำคัญ:</strong> $4,742 | <strong style="color: var(--gold);">แนวต้าน:</strong> $4,917-$4,893
+                </p>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            ⚠️ <strong>ข้อจำกัดความรับผิดชอบ:</strong> ข่าวนี้จัดทำเพื่อวัตถุประสงค์เท่านั้น 
+            การซื้อขาย XAUUSD มีความเสี่ยงสูง ผลการดำเนินงานในอดีตไม่ได้รับประกันผลลัพธ์ในอนาคต 
+            ควรวิเคราะห์ด้วยตัวเองและปรึกษาที่ปรึกษาทางการเงินที่ได้รับอนุญาตก่อนตัดสินใจซื้อขาย
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">🟡</div>
+            <p class="footer-text">
+                <strong>XAUUSD Trading Hub</strong> | News from Google News RSS | Generated: April 19, 2026 21:00 GMT+7
+            </p>
+            <p class="footer-text" style="margin-top: 8px;">
+                <a href="https://github.com/BassSG/xauusd-trading-hub" target="_blank">GitHub</a> | 
+                <a href="https://BassSG.github.io/xauusd-trading-hub/" target="_blank">Dashboard</a> |
+                <a href="economic-calendar.html">Calendar</a>
+            </p>
+        </footer>
+    </div>
+
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .news-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(255, 215, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .news-source {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .news-date {
+            color: var(--text-muted);
+        }
+
+        .news-title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .news-summary {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .news-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .tag-bull {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--bullish);
+        }
+
+        .tag-bear {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--bearish);
+        }
+
+        .tag-neutral {
+            background: rgba(234, 179, 8, 0.2);
+            color: var(--neutral);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-tab:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .filter-tab.active {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+            border-color: rgba(255, 215, 0, 0.3);
+            color: var(--gold);
+        }
+    </style>
+
+    <script>
+        // Simple category filter
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = tab.dataset.category;
+                const sections = document.querySelectorAll('.section[id]');
+
+                sections.forEach(section => {
+                    if (section.id === 'fed-section' || section.id === 'war-section' || 
+                        section.id === 'inflation-section' || section.id === 'price-section') {
+                        if (category === 'all') {
+                            section.style.display = 'block';
+                        } else {
+                            const categoryMap = {
+                                'price': 'price-section',
+                                'fed': 'fed-section',
+                                'war': 'war-section',
+                                'inflation': 'inflation-section'
+                            };
+                            section.style.display = section.id === categoryMap[category] ? 'block' : 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
