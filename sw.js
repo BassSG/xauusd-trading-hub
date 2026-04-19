@@ -1,19 +1,19 @@
 // XAUUSD Trading Hub - Service Worker
 const CACHE_NAME = 'xauusd-hub-v1';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/news.html',
-  '/daily-briefings.html',
-  '/economic-calendar.html',
-  '/gold-analysis.html',
-  '/weekly-reports.html',
-  '/assets/css/style.css',
-  '/assets/js/main.js',
-  '/assets/components/ui-components.js',
-  '/pwa/icon-192x192.png',
-  '/pwa/icon-512x512.png',
-  '/manifest.json'
+  './index.html',
+  './news.html',
+  './daily-briefings.html',
+  './economic-calendar.html',
+  './gold-analysis.html',
+  './weekly-reports.html',
+  './assets/css/style.css',
+  './assets/js/main.js',
+  './assets/js/pwa.js',
+  './assets/components/ui-components.js',
+  './pwa/icon-192x192.png',
+  './pwa/icon-512x512.png',
+  './manifest.json'
 ];
 
 // Install event - cache static assets
@@ -44,11 +44,13 @@ self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') return;
   
-  // Skip API calls and cross-origin requests
   const url = new URL(event.request.url);
+  
+  // Skip cross-origin requests (like Google Fonts)
   if (url.origin !== location.origin) return;
-  if (url.pathname.includes('/api/') || url.pathname.includes('json')) {
-    // For data files, use network-first
+  
+  // For API/data files, use network-first
+  if (url.pathname.endsWith('.json')) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
