@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta name="theme-color" content="#0a0e17">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="ทองคำ Trading">
-    <meta name="application-name" content="XAUUSD Trading Hub">
-    <meta name="msapplication-TileColor" content="#0a0e17">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="pwa/icon-192x192.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📰 Gold News - XAUUSD Trading Hub</title>
@@ -51,7 +42,7 @@
                 </div>
             </div>
             <div class="update-badge">
-                อัพเดทล่าสุด: 00:53 GMT+7 | 30 ข่าวล่าสุด
+                อัพเดทล่าสุด: 09:00 GMT+7 | 0 ข่าวล่าสุด
             </div>
         </header>
 
@@ -60,8 +51,8 @@
             <div class="api-status-bar">
                 <span class="api-status-label">🔄 สถานะ API:</span>
                 
-                <span class="api-status-item active">FMP ✅</span>
-                <span class="api-status-item inactive">Brave ❌</span>
+                <span class="api-status-item inactive">FMP ❌</span>
+                <span class="api-status-item active">Brave ✅</span>
                 <span class="api-status-item active">Tavily ✅</span>
                 <button class="refresh-btn" onclick="location.reload()">🔄 รีเฟรช</button>
             </div>
@@ -70,281 +61,11 @@
         <!-- Category Filter -->
         <div class="section" style="margin-bottom: 24px;">
             <div class="filter-tabs">
-                <button class="filter-tab active" data-category="all">📊 ทั้งหมด</button><button class="filter-tab" data-category="price">💰 ราคาทองคำ</button><button class="filter-tab" data-category="fed">🏦 นโยบายธนาคารกลางและ</button><button class="filter-tab" data-category="war">⚔️ สงครามและภูมิรัฐศาสตร์</button><button class="filter-tab" data-category="centralbank">🏛️ ธนาคารกลางและทองคำสำรอง</button>
+                <button class="filter-tab active" data-category="all">📊 ทั้งหมด</button>
             </div>
         </div>
 
         
-            <section class="section" id="price-section">
-                <div class="section-header">
-                    <div class="section-icon">💰</div>
-                    <div>
-                        <h2 class="section-title">💰 ราคาทองคำ (Gold Price)</h2>
-                        <p class="section-subtitle">ข่าวล่าสุด 8 ข่าว</p>
-                    </div>
-                </div>
-                <div class="news-grid">
-                    
-                <a href="https://www.fxempire.com/forecasts/article/gold-xau-usd-price-forecast-bullish-momentum-builds-beneath-major-resistance-1592426" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxempire.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ (ทองคำ/ดอลลาร์) ราคา พยากรณ์: ขาขึ้น โมเมนตัม Builds Beneath Major แนวต้าน</h3>
-                    <p class="news-summary">ทองคำ extends its rebound into key แนวต้าน while holding strong แนวรับ confluence, signaling continued upside potential if the 50-day moving average is decisively reclaimed.</p>
-                    <span class="news-tag tag-bull">FMP</span>
-                </a>
-                <a href="https://www.fxstreet.com/news/united-states-cftc-gold-nc-net-positions-up-to-1625k-from-previous-1563k-202604171930" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxstreet.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">United States CFTC ทองคำ NC Net Positions ขึ้น to $162.5K from previous $156.3K</h3>
-                    <p class="news-summary">United States CFTC ทองคำ NC Net Positions ขึ้น to $162.5K from previous $156.3K</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.fxstreet.com/news/gold-surges-past-4-850-as-hormuz-reopening-crushes-the-us-dollar-202604171909" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxstreet.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ surges past $4,850 as Hormuz reopening crushes the US ดอลลาร์</h3>
-                    <p class="news-summary">ทองคำ surges past $4,850 as Hormuz reopening crushes the US ดอลลาร์</p>
-                    <span class="news-tag tag-bull">FMP</span>
-                </a>
-                <a href="https://www.forex.com/en-us/news-and-analysis/gold-price-short-term-outlook-xau-usd-surges-19pct-bulls-test-key-resistance-4-17-2026/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">forex.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ ราคา Short-term มุมมอง: ทองคำ/ดอลลาร์ Surges 19% - Bulls Test Key แนวต้าน</h3>
-                    <p class="news-summary">ทองคำ prices remain firm near recent highs, with ทองคำ/ดอลลาร์ continuing to press into a key แนวต้าน zone following a strong recovery off the March ต่ำ. The sustained advance reflects improving near-term โมเมนตัม, but the broader มุมมอง now hinges on whether ราคา can break through this barrier.</p>
-                    <span class="news-tag tag-bull">FMP</span>
-                </a>
-                <a href="https://www.dailyforex.com/forex-technical-analysis/2026/04/gold-forex-forecast-17-april-2026/244085" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">dailyforex.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ พยากรณ์: ทองคำ Drifting on Thursday Around 50 Day EMA - 17 April 2026</h3>
-                    <p class="news-summary">ทองคำ is drifting around its 50-day EMA as traders watch the US 10-year yield near 4.30%, with $4,600 as key แนวรับ and $5,000 as the next major upside level.</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.actionforex.com/contributors/technical-analysis/637292-chart-alert-gold-xau-usd-potential-bullish-breakout-above-4900/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">actionforex.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">Chart Alert: ทองคำ (ทองคำ/ดอลลาร์) Potential ขาขึ้น Breakout Above $4,900</h3>
-                    <p class="news-summary">ทองคำ (ทองคำ/ดอลลาร์) has held steady on Friday, 17 April 2026, during the Asian session with a minuscule intraday gain of 0.2% to trade at $4,800 at this time of writing.</p>
-                    <span class="news-tag tag-bull">FMP</span>
-                </a>
-                </div>
-            </section>
-                
-            <section class="section" id="fed-section">
-                <div class="section-header">
-                    <div class="section-icon">🏦</div>
-                    <div>
-                        <h2 class="section-title">🏦 นโยบายธนาคารกลางและ Fed</h2>
-                        <p class="section-subtitle">ข่าวล่าสุด 6 ข่าว</p>
-                    </div>
-                </div>
-                <div class="news-grid">
-                    
-                <a href="https://www.fxempire.com/forecasts/article/gold-price-analysis-gold-continues-to-sit-at-same-level-1592371" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxempire.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ ราคา วิเคราะห์ – ทองคำ Continues to Sit at Same Level</h3>
-                    <p class="news-summary">ทองคำ continues to dance around the 50-day EMA on Friday, as we are waiting to find out the next move, and where we are going. The interest rate markets continue to be the main driver.</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.fxempire.com/forecasts/article/gold-news-gold-rally-loses-steam-as-rate-cut-odds-fall-to-27-1592263" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxempire.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ News: ทองคำ กระโดด Loses Steam as Rate Cut Odds ลง to 27%</h3>
-                    <p class="news-summary">ทองคำ ราคา prediction turns cautious as เฟด stays on hold, ดอลลาร์ firms, and oil drops, reducing เงินเฟ้อ pressure and limiting ทองคำ กระโดด potential.</p>
-                    <span class="news-tag tag-bear">FMP</span>
-                </a>
-                <a href="https://goldsilver.com/industry-news/article/gold-price-forecast-2026-2027-key-predictions-from-top-analysts/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ ราคา พยากรณ์ 2026–2027: Key Predictions from Top ...</h3>
-                    <p class="news-summary">Any long-term ทองคำ ราคา พยากรณ์ that ignores this structural shift in who holds the marginal bid is working from an outdated model. For a broader view of how this demand shift is reshaping the entire complex, our long-term silver forecasts explore the same structural forces at work in silver.
-
-###...</p>
-                    <span class="news-tag tag-bull">Tavily</span>
-                </a>
-                <a href="https://elements.visualcapitalist.com/central-bank-gold-reserves-biggest-changes-2020-2025/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">ธนาคารกลาง ทองคำ Reserves: Biggest Changes (2020–2025) - Elements by Visual Capitalist</h3>
-                    <p class="news-summary">### China and Eastern Europe Lead ทองคำ Buying
-
-China recorded the largest increase in ทองคำ reserves over the period, adding more than 350 tonnes. This reflects a broader strategy to diversify reserves away from the U.S. ดอลลาร์ and strengthen financial independence. Poland followed closely, increasin...</p>
-                    <span class="news-tag tag-bear">Tavily</span>
-                </a>
-                <a href="https://www.omfif.org/2025/09/central-banks-are-turning-back-to-gold/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">Central banks are turning back to ทองคำ - OMFIF</h3>
-                    <p class="news-summary">Geopolitical events have laid a solid foundation for ทองคำ to become prominent once again in the reserve portfolios of central banks, and as a way to settle payments for some countries. As geopolitical risks ขึ้น, various countries are setting their own restrictive rules for engagement, creating chal...</p>
-                    <span class="news-tag tag-bull">Tavily</span>
-                </a>
-                <a href="https://www.gold.org/goldhub/data/gold-reserves-by-country" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">Central Banks ทองคำ Reserves by Country | World ทองคำ Council</h3>
-                    <p class="news-summary"># ทองคำ Reserves by Country
-
-Central banks
-
-ทองคำ is an important component of ธนาคารกลาง reserves because of its safety, liquidity and return characteristics – the three key investment objectives for central banks. As such, they are significant holders of ทองคำ, accounting for around a fifth of all ...</p>
-                    <span class="news-tag tag-neutral">Tavily</span>
-                </a>
-                </div>
-            </section>
-                
-            <section class="section" id="war-section">
-                <div class="section-header">
-                    <div class="section-icon">⚔️</div>
-                    <div>
-                        <h2 class="section-title">⚔️ สงครามและภูมิรัฐศาสตร์</h2>
-                        <p class="section-subtitle">ข่าวล่าสุด 12 ข่าว</p>
-                    </div>
-                </div>
-                <div class="news-grid">
-                    
-                <a href="https://www.forex.com/en-us/news-and-analysis/crude-oil-gold-price-outlook-wti-drops-7pct-as-hormuz-risks-unwind-gold-tests-4-880/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">forex.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">Crude Oil, ทองคำ ราคา มุมมอง: WTI Drops 7% as Hormuz Risks Unwind, ทองคำ Tests 4,880</h3>
-                    <p class="news-summary">WTI has fallen over 7% this week toward the lower end of the $80 range, as easing tensions and the reopening of Hormuz reduce supply disruption risks. This has supported broader ตลาด sentiment, with US indices ขึ้น over 3% this week and more than 10% from March 2026 lows.</p>
-                    <span class="news-tag tag-bear">FMP</span>
-                </a>
-                <a href="https://www.orbex.com/blog/en/2026/04/gold-17-04-2026" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">orbex.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ –17.04.2026</h3>
-                    <p class="news-summary">  ทองคำ advanced above 4800 with optimisms over Iran-U.S negotiations. ทองคำ has the chance for more advance as the ตลาด looks for few days/weeks of calm.</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.fxstreet.com/news/gold-steady-near-4-800-as-us-iran-deal-hopes-grow-fed-rate-cut-bets-return-202604171218" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxstreet.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ steady near $4,800 as US-Iran deal hopes grow, เฟด rate cut bets return</h3>
-                    <p class="news-summary">ทองคำ steady near $4,800 as US-Iran deal hopes grow, เฟด rate cut bets return</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.fxstreet.com/news/gold-price-forecast-xau-usd-hovers-below-4-850-with-us-iran-peace-talks-in-focus-202604171137" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxstreet.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ ราคา พยากรณ์: ทองคำ/ดอลลาร์ hovers below $4,850 with US-Iran peace talks in focus</h3>
-                    <p class="news-summary">ทองคำ ราคา พยากรณ์: ทองคำ/ดอลลาร์ hovers below $4,850 with US-Iran peace talks in focus</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.fxempire.com/forecasts/article/gold-xauusd-silver-price-forecast-xauusd-defends-trendline-can-bulls-reclaim-4870-1592246" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">fxempire.com</span>
-                        <span class="news-date">2 วันที่แล้ง</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ (XAUUSD) & Silver ราคา พยากรณ์: XAUUSD Defends Trendline—Can Bulls Reclaim $4,870?</h3>
-                    <p class="news-summary">ทองคำ (XAUUSD) stabilizes at $4,790 as US-Iran diplomacy in Pakistan cools safe-haven demand. Discover why the $4,770 trendline remains the ultimate “must-hold” floor.</p>
-                    <span class="news-tag tag-neutral">FMP</span>
-                </a>
-                <a href="https://www.stonex.com/en/insights/gold-2026-outlook-what-s-in-store-for-xau-usd-in-q2-2026-03-30/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">ทองคำ 2026 มุมมอง: What’s in store for ทองคำ/ดอลลาร์ in Q2?</h3>
-                    <p class="news-summary">Objectively, we’ve also seen ทองคำ break below the 21-day exponential moving average. This hasn’t happened for quite some time. In fact, the last meaningful break below this level was back in May 2023, which led to a period of consolidation before prices moved higher again. Since then, dips below the...</p>
-                    <span class="news-tag tag-bull">Tavily</span>
-                </a>
-                </div>
-            </section>
-                
-            <section class="section" id="centralbank-section">
-                <div class="section-header">
-                    <div class="section-icon">🏛️</div>
-                    <div>
-                        <h2 class="section-title">🏛️ ธนาคารกลางและทองคำสำรอง</h2>
-                        <p class="section-subtitle">ข่าวล่าสุด 4 ข่าว</p>
-                    </div>
-                </div>
-                <div class="news-grid">
-                    
-                <a href="https://www.brookings.edu/articles/how-important-are-central-bank-holdings-of-gold/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">How important are ธนาคารกลาง holdings of ทองคำ? | Brookings</h3>
-                    <p class="news-summary">Preliminary IMF data for 2025 suggests some further increase in the volume of ทองคำ held by central banks, almost entirely due to emerging markets and developing economies. The most notable purchases were undertaken by Poland. Preliminary calculations suggest that ทองคำ holdings could account for abou...</p>
-                    <span class="news-tag tag-bear">Tavily</span>
-                </a>
-                <a href="https://apg.nl/en/publication/why-are-central-banks-expanding-their-gold-reserves/" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">Why are central banks expanding their ทองคำ reserves? | APG</h3>
-                    <p class="news-summary">ธนาคารกลาง has stored it in its own country. Politically less stable countries such as Russia, Turkey, and Kazakhstan are therefore clearly emerging as buyers. Diversification is another reason why central banks want ทองคำ as part of their reserves. This includes multiple currencies, as well as gol...</p>
-                    <span class="news-tag tag-neutral">Tavily</span>
-                </a>
-                <a href="https://www.gold.org/goldhub/gold-focus/2026/01/central-bank-gold-statistics-buying-momentum-continues-november" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">ธนาคารกลาง ทองคำ statistics: Buying โมเมนตัม continues into November | Post by Marissa Salim | ทองคำ Focus blog | World ทองคำ Council</h3>
-                    <p class="news-summary">Reproduction or redistribution of any of this information is expressly prohibited without the prior written consent of World ทองคำ Council or the appropriate copyright owners, except as specifically provided below. Information and statistics are copyright © and/or other intellectual property of the W...</p>
-                    <span class="news-tag tag-bull">Tavily</span>
-                </a>
-                <a href="https://www.bullionvault.com/gold-news/infographics/which-country-owns-most-gold-gold-reserves-nation" target="_blank" class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">Tavily</span>
-                        <span class="news-date">ไม่ทราบเวลา</span>
-                    </div>
-                    <h3 class="news-title">ธนาคารกลาง ทองคำ Reserves By Country | Map | BullionVault</h3>
-                    <p class="news-summary">ทองคำ in History
-
-ทองคำ Books
-
-## Archive
-
-List of authors
-
-# Which Country Owns the Most ทองคำ? ทองคำ Reserves By Nation
-
-Interactive map showing ธนาคารกลาง ทองคำ reserves by country and changes in ทองคำ reserves from 2019 to 2024
-
-Interactive map showing ธนาคารกลาง ทองคำ reserves by country and chang...</p>
-                    <span class="news-tag tag-neutral">Tavily</span>
-                </a>
-                </div>
-            </section>
-                
 
         <!-- Market Sentiment Summary -->
         <section class="section">
@@ -400,7 +121,7 @@ Interactive map showing ธนาคารกลาง ทองคำ reserves 
         <footer class="footer">
             <div class="footer-logo">🟡</div>
             <p class="footer-text">
-                <strong>XAUUSD Trading Hub</strong> | News from FMP API, Brave Search, Tavily | Generated: April 20, 2026 00:53 GMT+7
+                <strong>XAUUSD Trading Hub</strong> | News from FMP API, Brave Search, Tavily | Generated: April 20, 2026 09:00 GMT+7
             </p>
             <p class="footer-text" style="margin-top: 8px;">
                 <a href="https://github.com/BassSG/xauusd-trading-hub" target="_blank">GitHub</a> |
@@ -596,22 +317,5 @@ Interactive map showing ธนาคารกลาง ทองคำ reserves 
             });
         });
     </script>
-    <script src="assets/js/pwa.js" defer></script>
-    <!-- Install Banner -->
-    <div id="install-banner" class="install-banner">
-        <div class="install-banner-text">
-            <div class="install-banner-title">📱 ติดตั้งแอปบนมือถือ</div>
-            <div class="install-banner-sub">เข้าถึงเร็วขึ้น ใช้แบบ Offline ได้</div>
-        </div>
-        <button id="install-btn" class="install-banner-btn">ติดตั้ง</button>
-        <button id="install-close" class="install-banner-close">✕</button>
-    </div>
-
-    <!-- Splash Screen -->
-    <div id="splash-screen" class="splash-screen">
-        <div class="splash-icon">🟡</div>
-        <div class="splash-title">XAUUSD Trading Hub</div>
-        <div class="splash-subtitle">กำลังโหลด...</div>
-    </div>
 </body>
 </html>

@@ -520,6 +520,7 @@ body {
 .grid {
     display: grid;
     gap: 24px;
+    overflow-x: auto;
 }
 
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -538,7 +539,7 @@ body {
 .table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
+    min-width: 0;
 }
 
 .table th,
@@ -580,8 +581,15 @@ body {
    ================================================ */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 16px;
+    overflow-x: auto;
+}
+
+.card-grid > .card {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .card {

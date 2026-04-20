@@ -1,0 +1,36 @@
+2026-04-20 09:00:01,725 - __main__ - INFO - ============================================================
+2026-04-20 09:00:01,725 - __main__ - INFO - 📰 XAUUSD Trading Hub - NEWS AGENT
+2026-04-20 09:00:01,727 - __main__ - INFO - ============================================================
+2026-04-20 09:00:01,727 - __main__ - INFO - ==================================================
+2026-04-20 09:00:01,727 - __main__ - INFO - 🌐 Starting News Agent - Priority: FMP → Tavily → Brave
+2026-04-20 09:00:01,727 - __main__ - INFO - ==================================================
+2026-04-20 09:00:01,727 - __main__ - INFO - 📡 Step 1: Fetching FMP...
+2026-04-20 09:00:01,728 - __main__ - INFO - 📡 Fetching news from FMP API...
+2026-04-20 09:00:02,950 - __main__ - ERROR - Request failed: HTTP Error 401: Unauthorized
+2026-04-20 09:00:02,950 - __main__ - WARNING - ⚠️ FMP: No news data returned
+2026-04-20 09:00:02,950 - __main__ - INFO - 📊 FMP got 0 articles
+2026-04-20 09:00:02,950 - __main__ - INFO - 🌐 Step 2: Fetching Tavily...
+2026-04-20 09:00:02,951 - __main__ - INFO - 🌐 Fetching news from Tavily...
+2026-04-20 09:00:03,029 - __main__ - ERROR - Request failed: <urlopen error [Errno -2] Name or service not known>
+2026-04-20 09:00:03,060 - __main__ - ERROR - Request failed: <urlopen error [Errno -2] Name or service not known>
+2026-04-20 09:00:03,060 - __main__ - INFO - ✅ Tavily: Found 0 articles
+2026-04-20 09:00:03,060 - __main__ - INFO - 📊 Tavily got 0 articles
+2026-04-20 09:00:03,060 - __main__ - INFO - 🔍 Step 3: Only 0 articles - Fetching Brave as backup...
+2026-04-20 09:00:03,060 - __main__ - INFO - 🔍 Fetching news from Brave Search...
+2026-04-20 09:00:03,753 - __main__ - ERROR - Request failed: HTTP Error 422: 
+2026-04-20 09:00:04,337 - __main__ - ERROR - Request failed: HTTP Error 422: 
+2026-04-20 09:00:04,337 - __main__ - INFO - ✅ Brave: Found 0 articles
+2026-04-20 09:00:04,338 - __main__ - INFO - 📊 Brave added 0 articles
+2026-04-20 09:00:04,338 - __main__ - INFO - 📊 Total unique articles: 0
+2026-04-20 09:00:04,338 - __main__ - INFO - 🌐 Translating articles to Thai...
+2026-04-20 09:00:04,338 - __main__ - INFO - 📝 Generating news.html...
+2026-04-20 09:00:04,350 - __main__ - INFO - ✅ news.html generated: /home/administrator/xauusd-trading-hub/news.html
+2026-04-20 09:00:04,351 - __main__ - INFO - ✅ news_data.json saved: /home/administrator/xauusd-trading-hub/news_data.json
+2026-04-20 09:00:04,351 - __main__ - WARNING - ⚠️ No GitHub token - skipping upload
+2026-04-20 09:00:04,352 - __main__ - WARNING - ⚠️ No GitHub token - skipping upload
+2026-04-20 09:00:04,352 - __main__ - INFO - ============================================================
+2026-04-20 09:00:04,352 - __main__ - INFO - ✅ News Agent completed!
+2026-04-20 09:00:04,352 - __main__ - INFO - 📝 Generated: /home/administrator/xauusd-trading-hub/news.html
+2026-04-20 09:00:04,352 - __main__ - INFO - 📊 Data: /home/administrator/xauusd-trading-hub/news_data.json
+2026-04-20 09:00:04,352 - __main__ - INFO - ============================================================
+News Agent completed at Mon Apr 20 09:00:04 +07 2026
